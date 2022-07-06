@@ -22,7 +22,6 @@ int main()
 		return -1;
 	}
 	ManipulatorModule mManipulatorModule;
-	ResourceModule mResourceModule;
 
 	glfwSetWindowSizeCallback(window, mManipulatorModule.setWindowSizeCallback);
 	glfwSetFramebufferSizeCallback(window, mManipulatorModule.setFramebufferSizeCallback);
@@ -33,6 +32,8 @@ int main()
 		std::cout << "Failed to initialize GLAD" << std::endl;
 		return -1;
 	}
+
+	ResourceModule mResourceModule;
 
 	glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
 

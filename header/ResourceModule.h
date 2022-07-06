@@ -7,11 +7,19 @@ class ResourceModule
 {
 	public:
 		ResourceModule();
-
 		~ResourceModule();
+		unsigned int shaderProgram;
+		float* vertices;
+		unsigned int VBO;
+		unsigned int VAO;
 
 	private:
-		float *vertices;
+		char* vertexShaderSource;
+		char* fragmentShaderSource;
 
-		unsigned int VBO;
+		unsigned int vertexShader;
+		unsigned int fragmentShader;
+
+		bool checkShaderCompileSuccess(unsigned int);
+		bool checkShaderLinkSuccess(unsigned int);
 };

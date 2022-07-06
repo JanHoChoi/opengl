@@ -95,6 +95,7 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>D:\Github\opengl\header;D:\Github\opengl\third-party\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\Github\opengl\third-party\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
