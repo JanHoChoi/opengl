@@ -4,6 +4,7 @@
 #include "consts.h"
 #include "utils.h"
 #include "ManipulatorModule.h"
+#include "ResourceModule.h"
 
 int main()
 {
@@ -21,6 +22,7 @@ int main()
 		return -1;
 	}
 	ManipulatorModule mManipulatorModule;
+	ResourceModule mResourceModule;
 
 	glfwSetWindowSizeCallback(window, mManipulatorModule.setWindowSizeCallback);
 	glfwSetFramebufferSizeCallback(window, mManipulatorModule.setFramebufferSizeCallback);

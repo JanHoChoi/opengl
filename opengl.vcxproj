@@ -18,6 +18,21 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\glad.c" />
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\ManipulatorModule.cpp" />
+    <ClCompile Include="source\ResourceModule.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="header\consts.h" />
+    <ClInclude Include="header\ManipulatorModule.h" />
+    <ClInclude Include="header\ResourceModule.h" />
+    <ClInclude Include="header\utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shader\VertexShader.glsl" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -78,7 +93,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\Github\opengl\third-party\include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\Github\opengl\header;D:\Github\opengl\third-party\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\Github\opengl\third-party\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -141,16 +156,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="glad.c" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="ManipulatorModule.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="consts.h" />
-    <ClInclude Include="ManipulatorModule.h" />
-    <ClInclude Include="utils.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

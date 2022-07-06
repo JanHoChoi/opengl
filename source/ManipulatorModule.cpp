@@ -1,4 +1,3 @@
-#include <GLFW/glfw3.h>
 #include <algorithm>
 #include "consts.h"
 #include "ManipulatorModule.h"
