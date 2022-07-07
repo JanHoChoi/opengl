@@ -5,6 +5,7 @@
 #include "utils.h"
 #include "ManipulatorModule.h"
 #include "ResourceModule.h"
+#include "RenderModule.h"
 
 int main()
 {
@@ -21,11 +22,11 @@ int main()
 		glfwTerminate();
 		return -1;
 	}
-	ManipulatorModule mManipulatorModule;
+	glfwMakeContextCurrent(window);
 
+	ManipulatorModule mManipulatorModule;
 	glfwSetWindowSizeCallback(window, mManipulatorModule.setWindowSizeCallback);
 	glfwSetFramebufferSizeCallback(window, mManipulatorModule.setFramebufferSizeCallback);
-	glfwMakeContextCurrent(window);
 
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 	{
@@ -34,8 +35,7 @@ int main()
 	}
 
 	ResourceModule mResourceModule;
-
-	glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+	RenderModule mRenderModule;
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -43,6 +43,8 @@ int main()
 
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
+
+		mRenderModule.render();
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();

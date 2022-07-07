@@ -22,11 +22,13 @@
     <ClCompile Include="source\glad.c" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\ManipulatorModule.cpp" />
+    <ClCompile Include="source\RenderModule.cpp" />
     <ClCompile Include="source\ResourceModule.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\consts.h" />
     <ClInclude Include="header\ManipulatorModule.h" />
+    <ClInclude Include="header\RenderModule.h" />
     <ClInclude Include="header\ResourceModule.h" />
     <ClInclude Include="header\utils.h" />
   </ItemGroup>

@@ -13,6 +13,7 @@
     <ClCompile Include="source\glad.c">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="source\RenderModule.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\consts.h">
@@ -27,6 +28,7 @@
     <ClInclude Include="header\utils.h">
       <Filter>header</Filter>
     </ClInclude>
+    <ClInclude Include="header\RenderModule.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="source">
