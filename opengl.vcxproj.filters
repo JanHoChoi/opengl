@@ -13,7 +13,12 @@
     <ClCompile Include="source\glad.c">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="source\RenderModule.cpp" />
+    <ClCompile Include="source\RenderModule.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Shader.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\consts.h">
@@ -28,7 +33,12 @@
     <ClInclude Include="header\utils.h">
       <Filter>header</Filter>
     </ClInclude>
-    <ClInclude Include="header\RenderModule.h" />
+    <ClInclude Include="header\RenderModule.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Shader.h">
+      <Filter>header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="source">
@@ -43,6 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="shader\VertexShader.glsl">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="shader\FragmentShader.glsl">
       <Filter>shader</Filter>
     </None>
   </ItemGroup>

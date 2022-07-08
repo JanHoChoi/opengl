@@ -5,10 +5,7 @@
 
 class ResourceModule
 {
-	public:
-		ResourceModule();
-		~ResourceModule();
-
-	private:
-		
+public:
+	ResourceModule();
+	~ResourceModule();	
 };

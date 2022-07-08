@@ -24,15 +24,18 @@
     <ClCompile Include="source\ManipulatorModule.cpp" />
     <ClCompile Include="source\RenderModule.cpp" />
     <ClCompile Include="source\ResourceModule.cpp" />
+    <ClCompile Include="source\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\consts.h" />
     <ClInclude Include="header\ManipulatorModule.h" />
     <ClInclude Include="header\RenderModule.h" />
     <ClInclude Include="header\ResourceModule.h" />
+    <ClInclude Include="header\Shader.h" />
     <ClInclude Include="header\utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="shader\FragmentShader.glsl" />
     <None Include="shader\VertexShader.glsl" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
