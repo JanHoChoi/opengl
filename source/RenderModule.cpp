@@ -51,10 +51,11 @@ RenderModule::~RenderModule()
 void RenderModule::render()
 {
 	float timeValue = glfwGetTime();
-	float rightValue = (sin(timeValue) / 2.0f) + 0.5f;
-	int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
-
+	float horiOffset = sin(timeValue);	// [-1, 1]
+	
+	mShader->setFloat("horiOffset", horiOffset);
 	mShader->use();
+
 	glBindVertexArray(VAO);
 	glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0);
 }
