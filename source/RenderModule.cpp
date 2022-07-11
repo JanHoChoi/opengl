@@ -3,16 +3,18 @@
 
 RenderModule::RenderModule()
 {
-	int vertexSize = 18;
+	int vertexSize = 32;
 	vertices = new float[vertexSize]{
-		// 位置				// 颜色
-		0.0f, 0.5f, 0.0f,	0.0f, 0.0f, 1.0f,	// 上角
-		-0.5f, -0.5f, 0.0f,	0.0f, 1.0f, 0.0f,	// 左下角
-		0.5f, -0.5f, 0.0f,	1.0f, 0.0f, 0.0f,	// 右下角
+	//     ---- 位置 ----       ---- 颜色 ----     - 纹理坐标 -
+		0.5f, 0.5f, 0.0f,		1.0f, 0.0f, 0.0f,	2.0f, 2.0f,   // 右上
+		0.5f, -0.5f, 0.0f,		0.0f, 1.0f, 0.0f,	2.0f, 0.0f,   // 右下
+		-0.5f, -0.5f, 0.0f,		0.0f, 0.0f, 1.0f,	0.0f, 0.0f,   // 左下
+		-0.5f, 0.5f, 0.0f,		1.0f, 1.0f, 0.0f,	0.0f, 2.0f    // 左上
 	};
-	int indexSize = 3;
+	int indexSize = 6;
 	indices = new unsigned int[indexSize]{
-		0, 1, 2, // 第一个三角形
+		0, 1, 2,	// 第一个三角形
+		2, 3, 0,	// 第二个三角形
 	};
 
 	// 0. 初始化VAO/VBO/EBO
@@ -28,16 +30,20 @@ RenderModule::RenderModule()
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, indexSize * sizeof(unsigned int), indices, GL_STATIC_DRAW);
 	// 4. 设置顶点属性指针
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
+	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
 	glEnableVertexAttribArray(0);
 	glEnableVertexAttribArray(1);
+	glEnableVertexAttribArray(2);
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);	// 如果要unbind EBO，需要先unbind VAO
 
 	mShader = new Shader("shader/VertexShader.glsl", "shader/FragmentShader.glsl");
+	mTexture1 = new Texture("asset/container.jpg", GL_RGB);
+	mTexture2 = new Texture("asset/awesomeface.png", GL_RGBA);
 }
 
 RenderModule::~RenderModule()
@@ -46,16 +52,23 @@ RenderModule::~RenderModule()
 	glDeleteBuffers(1, &VBO);
 	glDeleteBuffers(1, &EBO);
 	delete mShader;
+	delete mTexture1, mTexture2;
 }
 
 void RenderModule::render()
 {
-	float timeValue = glfwGetTime();
-	float horiOffset = sin(timeValue);	// [-1, 1]
-	
-	mShader->setFloat("horiOffset", horiOffset);
 	mShader->use();
+	mShader->setInt("mTexture1", 0);
+	mShader->setInt("mTexture2", 1);
+	float timeValue = glfwGetTime();
+	float delta = sin(timeValue) / 2 + 0.5f;
+	mShader->setFloat("delta", delta);
+
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, mTexture1->textureID);
+	glActiveTexture(GL_TEXTURE1);
+	glBindTexture(GL_TEXTURE_2D, mTexture2->textureID);
 
 	glBindVertexArray(VAO);
-	glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0);
+	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 }

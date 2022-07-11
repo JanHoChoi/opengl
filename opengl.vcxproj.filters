@@ -19,6 +19,12 @@
     <ClCompile Include="source\Shader.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="source\Texture.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\std_image.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\consts.h">
@@ -39,6 +45,10 @@
     <ClInclude Include="header\Shader.h">
       <Filter>header</Filter>
     </ClInclude>
+    <ClInclude Include="header\Texture.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="source">

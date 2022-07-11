@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="source\std_image.cpp" />
+    <ClCompile Include="source\Texture.cpp" />
     <ClCompile Include="source\glad.c" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\ManipulatorModule.cpp" />
@@ -32,6 +34,8 @@
     <ClInclude Include="header\RenderModule.h" />
     <ClInclude Include="header\ResourceModule.h" />
     <ClInclude Include="header\Shader.h" />
+    <ClInclude Include="header\stb_image.h" />
+    <ClInclude Include="header\Texture.h" />
     <ClInclude Include="header\utils.h" />
   </ItemGroup>
   <ItemGroup>

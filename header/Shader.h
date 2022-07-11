@@ -19,11 +19,10 @@ public:
 	void setInt(const std::string& name, int value) const;
 	void setFloat(const std::string& name, float value) const;
 
-
-
 	unsigned int programID;
 	unsigned int vertShader;
 	unsigned int fragShader;
+
 private:
 	bool checkShaderCompileSuccess(unsigned int);
 	bool checkShaderLinkSuccess(unsigned int);
