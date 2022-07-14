@@ -25,6 +25,9 @@
     <ClCompile Include="source\std_image.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="source\core\math\vector3.cpp">
+      <Filter>source\core\math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\consts.h">
@@ -49,6 +52,9 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="header\stb_image.h" />
+    <ClInclude Include="source\core\math\vector3.h">
+      <Filter>source\core\math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="source">
@@ -59,6 +65,12 @@
     </Filter>
     <Filter Include="shader">
       <UniqueIdentifier>{4d88fcdc-f11f-4487-b294-f4a204c41d99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\core">
+      <UniqueIdentifier>{c110e5cb-6cde-43af-998f-6b3fca9b8366}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\core\math">
+      <UniqueIdentifier>{5dadff8f-f9e0-46af-acf1-67f627b5a4d3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="source\core\math\vector3.cpp" />
     <ClCompile Include="source\std_image.cpp" />
     <ClCompile Include="source\Texture.cpp" />
     <ClCompile Include="source\glad.c" />
@@ -37,6 +38,7 @@
     <ClInclude Include="header\stb_image.h" />
     <ClInclude Include="header\Texture.h" />
     <ClInclude Include="header\utils.h" />
+    <ClInclude Include="source\core\math\vector3.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shader\FragmentShader.glsl" />
