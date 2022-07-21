@@ -1,76 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="source\main.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="source\ManipulatorModule.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="source\ResourceModule.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="source\glad.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="source\RenderModule.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Shader.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Texture.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="source\std_image.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
     <ClCompile Include="source\core\math\vector3.cpp">
       <Filter>source\core\math</Filter>
     </ClCompile>
+    <ClCompile Include="source\function\render\RenderModule.cpp">
+      <Filter>source\function\render</Filter>
+    </ClCompile>
+    <ClCompile Include="source\function\input\ManipulatorModule.cpp">
+      <Filter>source\function\input</Filter>
+    </ClCompile>
+    <ClCompile Include="source\function\render\Shader.cpp">
+      <Filter>source\function\render</Filter>
+    </ClCompile>
+    <ClCompile Include="source\function\render\Texture.cpp">
+      <Filter>source\function\render</Filter>
+    </ClCompile>
+    <ClCompile Include="source\function\render\std_image.cpp">
+      <Filter>source\function\render</Filter>
+    </ClCompile>
+    <ClCompile Include="source\resource\ResourceModule.cpp">
+      <Filter>source\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="source\third-party\glad.c" />
+    <ClCompile Include="source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="header\consts.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="header\ManipulatorModule.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="header\ResourceModule.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="header\utils.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="header\RenderModule.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="header\Shader.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="header\Texture.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="header\stb_image.h" />
     <ClInclude Include="source\core\math\vector3.h">
       <Filter>source\core\math</Filter>
     </ClInclude>
+    <ClInclude Include="source\function\render\RenderModule.h">
+      <Filter>source\function\render</Filter>
+    </ClInclude>
+    <ClInclude Include="source\function\input\ManipulatorModule.h">
+      <Filter>source\function\input</Filter>
+    </ClInclude>
+    <ClInclude Include="source\function\render\Texture.h">
+      <Filter>source\function\render</Filter>
+    </ClInclude>
+    <ClInclude Include="source\function\render\Shader.h">
+      <Filter>source\function\render</Filter>
+    </ClInclude>
+    <ClInclude Include="source\function\render\stb_image.h">
+      <Filter>source\function\render</Filter>
+    </ClInclude>
+    <ClInclude Include="source\resource\ResourceModule.h">
+      <Filter>source\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="source\consts.h" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="source">
-      <UniqueIdentifier>{941bc28d-8eaa-49cb-80a3-fcb8cbeabb57}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="header">
-      <UniqueIdentifier>{2289969e-ac1e-4350-a244-c83c7222720b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="shader">
       <UniqueIdentifier>{4d88fcdc-f11f-4487-b294-f4a204c41d99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{bf45eaf2-21df-41e4-8e2b-012a4996ce99}</UniqueIdentifier>
     </Filter>
     <Filter Include="source\core">
       <UniqueIdentifier>{c110e5cb-6cde-43af-998f-6b3fca9b8366}</UniqueIdentifier>
     </Filter>
     <Filter Include="source\core\math">
       <UniqueIdentifier>{5dadff8f-f9e0-46af-acf1-67f627b5a4d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\function">
+      <UniqueIdentifier>{4dd74753-a9a3-489c-b5b1-5537e2bd2167}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\function\render">
+      <UniqueIdentifier>{311c8a66-c596-45e6-b967-d6fb602b94a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\function\input">
+      <UniqueIdentifier>{494809cf-4edc-4732-80f5-7e18a56147b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\resource">
+      <UniqueIdentifier>{3bb20b02-9f7d-4c51-a10d-7857c23aef31}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

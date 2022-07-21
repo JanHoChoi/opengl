@@ -1,6 +1,6 @@
 #include "Texture.h"
 #include <iostream>
-#include <stb_image.h>
+#include <function/render/stb_image.h>
 
 Texture::Texture(const char* resPath, unsigned int format)
 {
