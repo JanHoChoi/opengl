@@ -1,10 +1,13 @@
 #include "ResourceModule.h"
 #include <iostream>
 
-ResourceModule::ResourceModule()
+namespace LearnOpenGL
 {
-}
+	ResourceModule::ResourceModule()
+	{
+	}
 
-ResourceModule::~ResourceModule()
-{
+	ResourceModule::~ResourceModule()
+	{
+	}
 }

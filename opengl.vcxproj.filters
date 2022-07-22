@@ -16,14 +16,18 @@
     <ClCompile Include="source\function\render\Texture.cpp">
       <Filter>source\function\render</Filter>
     </ClCompile>
-    <ClCompile Include="source\function\render\std_image.cpp">
-      <Filter>source\function\render</Filter>
-    </ClCompile>
     <ClCompile Include="source\resource\ResourceModule.cpp">
       <Filter>source\resource</Filter>
     </ClCompile>
-    <ClCompile Include="source\third-party\glad.c" />
-    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\third-party\glad.c">
+      <Filter>source\third-party</Filter>
+    </ClCompile>
+    <ClCompile Include="source\third-party\std_image.cpp">
+      <Filter>source\third-party</Filter>
+    </ClCompile>
+    <ClCompile Include="source\main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\core\math\vector3.h">
@@ -41,13 +45,15 @@
     <ClInclude Include="source\function\render\Shader.h">
       <Filter>source\function\render</Filter>
     </ClInclude>
-    <ClInclude Include="source\function\render\stb_image.h">
-      <Filter>source\function\render</Filter>
-    </ClInclude>
     <ClInclude Include="source\resource\ResourceModule.h">
       <Filter>source\resource</Filter>
     </ClInclude>
-    <ClInclude Include="source\consts.h" />
+    <ClInclude Include="source\third-party\stb_image.h">
+      <Filter>source\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="source\consts.h">
+      <Filter>source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="shader">
@@ -73,6 +79,9 @@
     </Filter>
     <Filter Include="source\resource">
       <UniqueIdentifier>{3bb20b02-9f7d-4c51-a10d-7857c23aef31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\third-party">
+      <UniqueIdentifier>{05a5d6b0-f9c4-4ecf-9fa3-e3306a8d46b8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

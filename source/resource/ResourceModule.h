@@ -6,11 +6,14 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-class ResourceModule
+namespace LearnOpenGL
 {
-public:
-	ResourceModule();
-	~ResourceModule();	
-};
+	class ResourceModule
+	{
+	public:
+		ResourceModule();
+		~ResourceModule();
+	};
+}
 
 #endif

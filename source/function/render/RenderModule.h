@@ -5,8 +5,8 @@
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "Shader.h"
-#include "Texture.h"
+#include "function/render/Shader.h"
+#include "function/render/Texture.h"
 
 namespace LearnOpenGL
 {

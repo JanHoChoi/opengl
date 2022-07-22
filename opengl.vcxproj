@@ -20,7 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\core\math\vector3.cpp" />
-    <ClCompile Include="source\function\render\std_image.cpp" />
+    <ClCompile Include="source\third-party\std_image.cpp" />
     <ClCompile Include="source\function\render\Texture.cpp" />
     <ClCompile Include="source\third-party\glad.c" />
     <ClCompile Include="source\main.cpp" />
@@ -35,7 +35,7 @@
     <ClInclude Include="source\function\render\RenderModule.h" />
     <ClInclude Include="source\resource\ResourceModule.h" />
     <ClInclude Include="source\function\render\Shader.h" />
-    <ClInclude Include="source\function\render\stb_image.h" />
+    <ClInclude Include="source\third-party\stb_image.h" />
     <ClInclude Include="source\function\render\Texture.h" />
     <ClInclude Include="source\core\math\vector3.h" />
   </ItemGroup>
@@ -144,6 +144,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\github\opengl\source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
