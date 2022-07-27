@@ -7,6 +7,7 @@
 #include <GLFW/glfw3.h>
 #include "function/render/Shader.h"
 #include "function/render/Texture.h"
+#include "function/render/Vertex.h"
 
 namespace LearnOpenGL
 {
@@ -19,7 +20,7 @@ namespace LearnOpenGL
 		void render();
 
 	private:
-		float* vertices;
+		Vertex* vertices;
 		unsigned int* indices;
 		unsigned int VBO;
 		unsigned int VAO;

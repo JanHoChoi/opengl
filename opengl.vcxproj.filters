@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="source\core\math\vector3.cpp">
+    <ClCompile Include="source\core\math\Vector3.cpp">
       <Filter>source\core\math</Filter>
     </ClCompile>
     <ClCompile Include="source\function\render\RenderModule.cpp">
@@ -28,9 +28,12 @@
     <ClCompile Include="source\main.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="source\core\math\Vector2.cpp">
+      <Filter>source\core\math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\core\math\vector3.h">
+    <ClInclude Include="source\core\math\Vector3.h">
       <Filter>source\core\math</Filter>
     </ClInclude>
     <ClInclude Include="source\function\render\RenderModule.h">
@@ -53,6 +56,12 @@
     </ClInclude>
     <ClInclude Include="source\consts.h">
       <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\function\render\Vertex.h">
+      <Filter>source\function\render</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\math\Vector2.h">
+      <Filter>source\core\math</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

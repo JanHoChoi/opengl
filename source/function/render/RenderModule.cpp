@@ -1,23 +1,22 @@
-#include "function/render/RenderModule.h"
 #include <iostream>
-#include "core/math/vector3.h"
+
+#include "function/render/RenderModule.h"
 
 namespace LearnOpenGL
 {
 	RenderModule::RenderModule()
 	{
-		int vertexSize = 32;
-		vertices = new float[vertexSize] {
-			//     ---- 位置 ----       ---- 颜色 ----     - 纹理坐标 -
-			0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 2.0f, 2.0f,   // 右上
-				0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 2.0f, 0.0f,   // 右下
-				-0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,   // 左下
-				-0.5f, 0.5f, 0.0f, 1.0f, 1.0f, 0.0f, 0.0f, 2.0f    // 左上
+		int vertexSize = 4;
+		vertices = new Vertex[vertexSize] {
+			{ {0.5f, 0.5f, 0.0f}, {1.0f, 0.0f, 0.0f}, {2.0f, 2.0f} },
+			{ {0.5f, -0.5f, 0.0f}, {0.0f, 1.0f, 0.0f}, {2.0f, 0.0f} },
+			{ {-0.5f, -0.5f, 0.0f}, {0.0f, 0.0f, 1.0f}, {0.0f, 0.0f} },
+			{ {-0.5f, 0.5f, 0.0f}, {1.0f, 1.0f, 0.0f}, {0.0f, 2.0f} },
 		};
 		int indexSize = 6;
 		indices = new unsigned int[indexSize] {
 			0, 1, 2,	// 第一个三角形
-				2, 3, 0,	// 第二个三角形
+			2, 3, 0,	// 第二个三角形
 		};
 
 		// 0. 初始化VAO/VBO/EBO
@@ -28,14 +27,14 @@ namespace LearnOpenGL
 		glBindVertexArray(VAO);
 		// 2. 把顶点数组复制到缓冲中，供OpenGL使用
 		glBindBuffer(GL_ARRAY_BUFFER, VBO);
-		glBufferData(GL_ARRAY_BUFFER, vertexSize * sizeof(float), vertices, GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, vertexSize * sizeof(Vertex), vertices, GL_STATIC_DRAW);
 		// 3. 复制索引数组到一个索引缓冲中，供OpenGL使用
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 		glBufferData(GL_ELEMENT_ARRAY_BUFFER, indexSize * sizeof(unsigned int), indices, GL_STATIC_DRAW);
 		// 4. 设置顶点属性指针
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
-		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
-		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)0);
+		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)(sizeof(Vector3)));
+		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)(2 * sizeof(Vector3)));
 		glEnableVertexAttribArray(0);
 		glEnableVertexAttribArray(1);
 		glEnableVertexAttribArray(2);
@@ -56,6 +55,7 @@ namespace LearnOpenGL
 		glDeleteBuffers(1, &EBO);
 		delete mShader;
 		delete mTexture1, mTexture2;
+		delete vertices;
 	}
 
 	void RenderModule::render()

@@ -1,4 +1,4 @@
-#include "vector3.h"
+#include "core/math/Vector3.h"
 
 namespace LearnOpenGL
 {

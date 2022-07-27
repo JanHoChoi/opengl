@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\core\math\vector3.cpp" />
+    <ClCompile Include="source\core\math\Vector3.cpp" />
     <ClCompile Include="source\third-party\std_image.cpp" />
     <ClCompile Include="source\function\render\Texture.cpp" />
     <ClCompile Include="source\third-party\glad.c" />
@@ -28,6 +28,7 @@
     <ClCompile Include="source\function\render\RenderModule.cpp" />
     <ClCompile Include="source\resource\ResourceModule.cpp" />
     <ClCompile Include="source\function\render\Shader.cpp" />
+    <ClCompile Include="source\core\math\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\consts.h" />
@@ -37,7 +38,9 @@
     <ClInclude Include="source\function\render\Shader.h" />
     <ClInclude Include="source\third-party\stb_image.h" />
     <ClInclude Include="source\function\render\Texture.h" />
-    <ClInclude Include="source\core\math\vector3.h" />
+    <ClInclude Include="source\core\math\Vector3.h" />
+    <ClInclude Include="source\function\render\Vertex.h" />
+    <ClInclude Include="source\core\math\Vector2.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shader\FragmentShader.glsl" />
